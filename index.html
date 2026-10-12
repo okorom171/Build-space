@@ -3,24 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-
-    <!-- Number 1 -->
-    <h1 id="heading1">Day-5's Task</h1>
-    <p id="p-1">This is my webpage</p>
-    <button id="click">click me</button>
-    <div><img src="./image/dodge.png" alt="" id="image" /></div>
-    <ul id="list">
-      <li>JavaScript</li>
-      <li id="child">Python</li>
-      <li>C++</li>
-      <li>HTML</li>
-    </ul>
-
-    <!-- Number 2 -->
+    <form>
+      <label for="name">Name </label>
+      <br />
+      <input type="text" id="name" placeholder="John Doe" />
+      <br />
+      <br />
+      <label for="email">Email</label>
+      <br />
+      <input type="email" id="email" placeholder="JohnDoe@gmail.com" />
+      <br />
+      <br />
+      <label for="pass">Password</label>
+      <br />
+      <input type="text" placeholder="********" id="pass" />
+      <p id="errorMsg"></p>
+      <button id="submit">Submit</button>
+    </form>
 
     <script src="./script.js"></script>
   </body>

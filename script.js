@@ -1,21 +1,20 @@
-// Number 1
-const Header = document.getElementById("heading1")
-const Paragraph1 = document.getElementById("p-1")
-const Button = document.getElementById("click")
-const List = document.getElementById("list")
-const Child = document.getElementById("child")
+const myFunction = () => {
+  const Name = document.getElementById("name");
+  const Email = document.getElementById("email");
+  const Password = document.getElementById("pass");
+//   const SubmitBtn = document.getElementById("submit");
+  const Message = document.getElementById("errorMsg");
 
+  Message.innerHTML = " ";
 
-// Change the header's content
-Header.innerHTML= "Hello, World"
+  // let x = document.getElementById("pass")
 
-// Change the Paragraph's content
-Paragraph1.innerHTML = "I am a Programmer👾"
-
-//Change the Image source 
-
-// CSS class change
-Paragraph1.style.color = "red"
-
-// Change the text of one list item
-Child.innerHTML = "CSS"
+  try {
+    if (Password.length < 8)
+      throw "Password must be at least 8 characters long";
+    if (Email == "") throw "Input Email";
+    if (Name == "") throw "Input Name";
+  } catch {
+    Message.innerHTML = "Input is " + err;
+  }
+};
