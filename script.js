@@ -1,15 +1,18 @@
-// Copy to clipboard
 
-const copyBtn = document.getElementById("copyBtn");
-const referral = document.getElementById("referral");
-const copyMessage = document.getElementById("copyMessage");
+/* TOGGLE LIGHT AND DARK MODES */
 
-copyBtn.addEventListener("click", async () => {
-  try {
-    await navigator.clipboard.writeText(referral.textContent);
-    copyMessage.textContent = "Copied!";
-  } catch (error) {
-    copyMessage.textContent =
-      "Copy failed. Please select and copy the text manually.";
+const themeBtn = document.querySelector(".toggleBtn");
+
+themeBtn.addEventListener("click", () => {
+  const theme_attribute = document
+    .querySelector("html")
+    .getAttribute("data-theme");
+
+  if (theme_attribute === "light") {
+    document.querySelector("html").setAttribute("data-theme", "dark");
+    themeBtn.textContent = "Light Mode";
+  } else {
+    document.querySelector("html").setAttribute("data-theme", "light");
+    themeBtn.textContent = "Dark Mode";
   }
 });

@@ -1,3 +1,51 @@
-form{
-    display: block;
+
+
+/* TOGGLE LIGHT AND DARK MODES */
+
+
+:root {
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --border-color: #e2e8f0;
+  --output-bg: #f8fafc;
+  --shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --border-color: #334155;
+  --output-bg: #0f172a;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.toggleBtn {
+  align-self: self-start;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: var(--shadow);
 }
